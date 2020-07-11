@@ -1,0 +1,8 @@
+**/__pycache__
+**/.DS_STORE
+secret.py
+.cache.json
+cache/
+temp/
+notes/azlen.json
+notes/json_archive/
