@@ -1,0 +1,489 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: #FAFAFA;
+    color: #000000;
+    font-family: 'EB Garamond', Garamond, serif;
+    /*font-family: 'Ibarra Real Nova', Garamond, serif;*/
+    font-size: 20px;
+    padding-top: 4rem;
+}
+
+h1, h2, h3 {
+    /*font-family: "Space Mono", monospace;*/
+    font-family: "Heebo", sans-serif;
+    margin-bottom: 1.2rem;
+    margin-top: 1.8rem;
+    line-height: 1.2 !important; /* in case it wraps lines */
+}
+
+h1.title {
+    margin-bottom: 0.2rem;
+}
+header .date {
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    color: #999999;
+    font-size: 14px;
+}
+header {
+    margin-bottom: 2.0rem;
+}
+
+h1.title {
+    font-family: "Heebo", sans-serif;
+    text-align: center;
+    margin-top: -10px;
+    /*margin-bottom: 2.0rem*/
+    margin-bottom: 0.2rem;
+}
+
+h2, h3 { font-variant-ligatures: no-common-ligatures }
+
+h2 {
+    font-weight: 500;
+}
+h2 a{
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    color: black !important;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+p, ol, ul, table, blockquote {
+    margin-bottom: 1.6rem;
+    line-height: 1.42em;
+    line-height: 1.6em;
+}
+
+ol, ul {
+    padding-left: 2.0rem;
+}
+
+main a {
+    color: #ff3392;
+    text-decoration: none;
+    /*border-bottom: 1px dotted;*/
+}
+main a:not(.viewmore) > span {
+    background-image: radial-gradient(1px 1px at center, #ff3392 0.5px, transparent 1px);
+    background-position: 0 1.10em;
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+    text-shadow:    0.5px 0.5px #FBF8F5, 0.5px -0.5px #FBF8F5, -0.5px 0.5px #FBF8F5, -0.5px -0.5px #FBF8F5,
+                    1px 1px #FBF8F5, 1px -1px #FBF8F5, -1px 1px #FBF8F5, -1px -1px #FBF8F5,
+                    1.5px 1.5px #FBF8F5, 1.5px -1.5px #FBF8F5, -1.5px 1.5px #FBF8F5, -1.5px -1.5px #FBF8F5;
+
+}
+h1 a > span, h2 a > span, h3 a > span{
+    /*border-width: 2px;*/
+
+    background-image: radial-gradient(1px 1px at center, #ff3392 1px, transparent 1.6px) !important;
+    background-position: 0 1.15em !important;
+    background-size: 4px 3px !important;
+}
+
+a.viewmore {
+    display: inline-block;
+
+    color: #000000;
+    border: none;
+
+    font-family: "Space Mono", sans-serif;
+    font-size: 12px;
+
+    border-radius: 7px;
+    padding: 2px 15px;
+    background-color: #D6D4D0;
+}
+a.viewmore:hover {
+    background-color: #C6C4C0;
+}
+
+a.wiki-link {
+    font-size: 16px;
+}
+/*a.wiki-link > span { background-image: none !important }*/
+a.homepage-link {
+    font-size: 18px;
+}
+
+.chladni {
+    display: inline-block;
+    margin: 0 0 -3px 0;
+    width: 15px;
+}
+
+a.age1 { color: #8cbd19 }
+a.age1 > span { background-image: radial-gradient(1px 1px at center, #8cbd19 0.5px, transparent 1px) !important }
+a.age2 { color: #c58b0d }
+a.age2 > span { background-image: radial-gradient(1px 1px at center, #c58b0d 0.5px, transparent 1px) !important }
+a.age3 { color: #685e57 }
+a.age3 > span { background-image: radial-gradient(1px 1px at center, #685e57 0.5px, transparent 1px) !important }
+
+a.evergreen { color: #7b23e0 }
+a.evergreen > span { background-image: radial-gradient(1px 1px at center, #7b23e0 0.5px, transparent 1px) !important }
+
+pre {
+    tab-size: 4;
+}
+
+p code {
+    display: inline-block;
+    font-family: "Space Mono", monospace;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    font-size: 15px;
+    padding: 0px 5px;
+}
+
+pre {
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 1.4rem;
+    max-height: 360px;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    max-width: 36em;
+    margin: auto;
+    padding-bottom: 10rem;
+}
+
+#logo svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#tl {
+    position: fixed;
+    top: 4rem;
+    left: 4rem;
+}
+
+#tl nav {
+    margin-top: 2.0rem;
+}
+
+#tl nav a {
+    display: block;
+    text-decoration: none;
+}
+
+#tl nav a,
+#tl .stat {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    color: #999;
+}
+
+#tl nav a svg {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 10px;
+    fill: #999;
+    stroke: #999;
+}
+
+#tl nav a:hover {
+    color: #444;
+}
+#tl nav a:hover svg {
+    fill: #444;
+    stroke: #444;
+}
+
+.column-container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+.column:first-child { margin-left: 0 }
+.column:last-child { margin-right: 0 }
+
+
+figure {
+    display: block;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+figure img {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+figcaption {
+    font-family: 'EB Garamond', Garamond, serif;
+    /*font-family: 'Ibarra Real Nova', Garamond, serif;
+    font-family: 'Source Serif Pro', Garamond, serif;*/
+    font-size: 16px;
+    color: #999;
+    font-style: italic;
+}
+
+
+.table-container {
+    overflow-x: auto;
+}
+table {
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+table th {
+    font-weight: bold;
+}
+
+table.small td:not(:last-child) {
+    padding-right: 20px;
+}
+
+table.normal {
+    position: relative;
+    width: 100%;
+}
+table.normal td, table.normal th {
+    text-align: left;
+    padding: 4px 15px;
+    outline: 1px solid #BBB;
+}
+table.nowrap td, table.nowrap th {
+    white-space: nowrap;
+}
+
+blockquote {
+    margin-left: 20px;
+    margin-right: 40px;
+
+    padding-left: 25px;
+    border-left: 5px solid #DAD7D7;
+    color: #999;
+}
+
+.divider {
+    margin-bottom: 10rem;
+}
+
+.tag {
+    background-color: #999;
+    font-family: "Space Mono", courier;
+    font-size: 9px;
+    padding: 0px 7px 1px 7px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    display: inline;
+    margin-left: 5px;
+}
+.tag.inline-date { 
+    margin-left: 0px;
+    font-size: 12px;
+    margin-right: 4px;
+    vertical-align: top;
+ }
+.tag.green { background-color: #76ad00; }
+.tag.blue { background-color: #0095eb; }
+
+.toc { margin-top: 0; }
+.toc-indent-1 { padding-left: 0px ; }
+.toc-indent-2 { padding-left: 25px; }
+.toc-indent-3 { padding-left: 50px; }
+
+.pagecover { 
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.pagecover > img {
+    margin: 0;
+    transform: scale(1);
+    transition: 0.25s transform;
+}
+.pagecover:hover > img{
+    transform: scale(1.05);
+}
+
+.pagelink {
+    display: flex;
+    height: 95px;
+    /*background-color: #D2CECA;*/
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.25s background-color;
+    text-decoration: none;
+    color: #000000;
+
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+/*.pagelink:hover {
+    background-color: rgb(179, 190, 209);
+}*/
+.pagelink-icon {
+    width: 95px;
+    flex: 1 0 1;
+    background-size: cover;
+}
+.pagelink-text {
+    flex: 1 0 235px;
+    padding: 15px 10px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.pagelink-text-title {
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    transition: all .2s ease-out;
+}
+.pagelink-text-description {
+    font-size: 14;
+    /*font-family: "EB Garamond"*/
+    max-width: 300px;
+
+    transition: all .2s ease-out;
+}
+.pagelink-arrow {
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    
+    position: absolute;
+    top: 25px;
+    right: 40px;
+
+    transition: all .2s ease-out;
+}
+.pagelink:hover .pagelink-arrow {
+    opacity: 1;
+    z-index: 1001;
+    right: 25px;
+}
+.pagelink:hover .pagelink-text-title, .pagelink:hover .pagelink-text-description {
+    opacity: 0.5;
+}
+
+.pagelink::before {
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    top: 1px;
+    right: 1px;
+    width: 200px;
+    height: 93px;
+
+    border-radius: 5px;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+.pagelink:hover::before {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 1200px) {
+    #tl {
+        position: static;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #tl .stat {
+        display: none;
+    }
+    #tl nav {
+        margin-top: 0;
+    }
+    #tl nav a {
+        display: inline-block;
+        font-size: 16px;
+    }
+    #tl nav a:not(:last-child) {
+        margin-right: 20px;
+    }
+    #tl nav.social {
+        display: none;
+    }
+    #tl nav a svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .toc { display: none; }
+}
+
+@media screen and (max-width: 720px) {
+    .column-container {
+        display: block;
+    }
+    .column {
+        margin: auto !important;
+        margin-bottom: 2.0rem;
+        width: 400px;
+        max-width: 100%;
+    }
+    a.wiki-link {
+        font-size: inherit;
+    }
+    a.homepage-link {
+        font-size: inherit;
+    }
+}
+
+::-moz-selection {
+    background-color: #ff3392;
+    background-color: #000000;
+    text-shadow: none;
+    color: #FFFFFF;
+}
+
+::selection {
+    background-color: #ff3392;
+    background-color: #000000;
+    text-shadow: none;
+    color: #FFFFFF;
+}

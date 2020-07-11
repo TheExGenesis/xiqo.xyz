@@ -1,0 +1,128 @@
+<html>
+<head>
+    <title>{{ page.name }}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% endif %}">
+
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="{{ page.name }}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% endif %}">
+    <meta property="og:image" content="/og-image.png">
+    <!--<meta name="twitter:card" content="summary_large_image">-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="/twitter-image.png">
+    <meta name="twitter:site" content="@ExGenesis">
+    <meta name="twitter:creator" content="@ExGenesis">
+    <!--<meta property="og:url" content="">-->
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#EEEBE8">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#EEEBE8">
+
+    {% if page.posted %}
+        <link rel="icon" type="image/png" sizes="32x32" href="/chladni/{{ page.wordcount | wordcount_to_freq }}.png">
+    {% else %}
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    {% endif %}
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700|Space+Mono|Heebo:500,900&display=swap" rel="stylesheet"> 
+    <!--<link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">-->
+    
+    <!-- STYLE -->
+    <style>
+        /* WEBSITE STYLES */
+        {% include 'css/main.css' %}
+
+        /* CODE BLOCK STYLING */
+        {% include 'css/manni.css' %}
+    </style>
+</head>
+<body>
+    <!--NOTION_ID:{{ page.id }}-->
+    <div id="tl">
+        <a href="/" id="logo">
+            {% include 'svg/logo.svg' %}
+        </a>
+        {% if page.path == '/'  %}
+            <div class="stat">{{ site.wordcount | commafy }} words</div>
+            <div class="stat">{{ site.pagecount | commafy }} pages</div>
+            <nav>
+                {% for p in collection.pages | rejectattr('navigation', 'none') | sort(attribute="navigation") %}
+                    {% if p.navigation > 0 %}
+                        <a href="{{ p.redirect or p.path }}">
+                            {{ p.name }}
+                            {% if p.tag %}
+                                <span class="tag {{ {'new':'blue', 'updated':'green'}.get(p.tag) or '' }}">{{ p.tag }}</span>
+                            {% endif %}
+                        </a>
+                    {% endif %}
+                {% endfor %}
+                <a href="/about">About</a>
+                <!--<a href="/wiki">Wiki</a>-->
+                <!--<a href="/learning">Learning</a>-->
+                <!--<a href="/reading">Reading</a>-->
+                <!--<a href="/contact">Contact</a>-->
+            </nav>
+            <nav class="social">
+                <a href="https://instagram.com/theexgenesis" target="_blank">{% include 'svg/instagram.svg' %}</a>
+                <a href="https://github.com/theexgenesis" target="_blank">{% include 'svg/github.svg' %}</a>
+                    <span style="display:inline-block; transform:scale(1.2);"> <!-- webring logo looks too small -->
+                        {% include 'svg/webring.svg' %}
+                    </span>
+                </a>
+            </nav>
+        {% endif %}
+        <!--
+        {% if page.tableofcontents | length > 0 %}
+            <nav class="toc">
+                {% for item in page.tableofcontents %}
+                    <a class="toc-indent-{{ item[0] }}"href="#{{ item[2] }}">{{ item[1] }}</a>
+                {% endfor %}
+            </nav>
+        {% endif %}
+        -->
+    </div>
+    <main>
+        <header>
+            <h1 class="title">{{ page.name }}</h1>
+            {% if page.posted %}
+            <div class="date">{{ fromiso(page.posted.start).strftime("%B %d, %Y") }}</div>
+            {% endif %}
+        </header>
+
+        {{ content }}
+        
+        {% for p in collection.blog | sort(attribute="created")  | reverse  %}
+            <ul>
+                <li>
+                    <a href="{{ p.redirect or p.path }}">
+                        {{ p.name }}
+                        {% if p.tag %}
+                            <span class="tag {{ {'new':'blue', 'updated':'green'}.get(p.tag) or '' }}">{{ p.tag }}</span>
+                        {% endif %}
+                    </a>
+                </li>
+            </ul>
+        {% endfor %}
+    </main>
+</body>
+</html>
