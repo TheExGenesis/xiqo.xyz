@@ -9,7 +9,7 @@
             "other": "<pre><code>{% highlight {{ code_lang }} %} {{ text }} {% endhighlight %}</code></pre>"
         },
         "callout": { 
-            "🔮": 
+            "🔮": ""
         }
     },
     "text": {

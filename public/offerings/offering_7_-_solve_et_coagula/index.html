@@ -1,0 +1,889 @@
+<html>
+<head>
+    <title>offering 7 - solve et coagula</title>
+    <meta name="description" content="">
+
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="offering 7 - solve et coagula">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="/og-image.png">
+    <!--<meta name="twitter:card" content="summary_large_image">-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="/twitter-image.png">
+    <meta name="twitter:site" content="@ExGenesis">
+    <meta name="twitter:creator" content="@ExGenesis">
+    <!--<meta property="og:url" content="">-->
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#EEEBE8">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#EEEBE8">
+
+    
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    
+    
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700|Space+Mono|Heebo:500,900&display=swap" rel="stylesheet"> 
+    <!--<link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">-->
+    
+    <!-- STYLE -->
+    <style>
+        /* WEBSITE STYLES */
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: #FAFAFA;
+    color: #000000;
+    font-family: 'EB Garamond', Garamond, serif;
+    /*font-family: 'Ibarra Real Nova', Garamond, serif;*/
+    font-size: 20px;
+    padding-top: 4rem;
+}
+
+h1, h2, h3 {
+    /*font-family: "Space Mono", monospace;*/
+    font-family: "Heebo", sans-serif;
+    margin-bottom: 1.2rem;
+    margin-top: 1.8rem;
+    line-height: 1.2 !important; /* in case it wraps lines */
+}
+
+h1.title {
+    margin-bottom: 0.2rem;
+}
+header .date {
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    color: #999999;
+    font-size: 14px;
+}
+header {
+    margin-bottom: 2.0rem;
+}
+
+h1.title {
+    font-family: "Heebo", sans-serif;
+    text-align: center;
+    margin-top: -10px;
+    /*margin-bottom: 2.0rem*/
+    margin-bottom: 0.2rem;
+}
+
+h2, h3 { font-variant-ligatures: no-common-ligatures }
+
+h2 {
+    font-weight: 500;
+}
+h2 a{
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    color: black !important;
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+p, ol, ul, table, blockquote {
+    margin-bottom: 1.6rem;
+    line-height: 1.42em;
+    line-height: 1.6em;
+}
+
+
+ol, ul {
+    padding-left: 2.0rem;
+}
+
+main a {
+    color: #ff3392;
+    text-decoration: none;
+    /*border-bottom: 1px dotted;*/
+}
+main a:not(.viewmore) > span {
+    background-image: radial-gradient(1px 1px at center, #ff3392 0.5px, transparent 1px);
+    background-position: 0 1.10em;
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+    text-shadow:    0.5px 0.5px #FBF8F5, 0.5px -0.5px #FBF8F5, -0.5px 0.5px #FBF8F5, -0.5px -0.5px #FBF8F5,
+                    1px 1px #FBF8F5, 1px -1px #FBF8F5, -1px 1px #FBF8F5, -1px -1px #FBF8F5,
+                    1.5px 1.5px #FBF8F5, 1.5px -1.5px #FBF8F5, -1.5px 1.5px #FBF8F5, -1.5px -1.5px #FBF8F5;
+
+}
+h1 a > span, h2 a > span, h3 a > span{
+    /*border-width: 2px;*/
+
+    background-image: radial-gradient(1px 1px at center, #ff3392 1px, transparent 1.6px) !important;
+    background-position: 0 1.15em !important;
+    background-size: 4px 3px !important;
+}
+
+a.viewmore {
+    display: inline-block;
+
+    color: #000000;
+    border: none;
+
+    font-family: "Space Mono", sans-serif;
+    font-size: 12px;
+
+    border-radius: 7px;
+    padding: 2px 15px;
+    background-color: #D6D4D0;
+}
+a.viewmore:hover {
+    background-color: #C6C4C0;
+}
+
+a.wiki-link {
+    font-size: 16px;
+}
+/*a.wiki-link > span { background-image: none !important }*/
+a.homepage-link {
+    font-size: 18px;
+}
+
+.chladni {
+    display: inline-block;
+    margin: 0 0 -3px 0;
+    width: 15px;
+}
+
+a.age1 { color: #8cbd19 }
+a.age1 > span { background-image: radial-gradient(1px 1px at center, #8cbd19 0.5px, transparent 1px) !important }
+a.age2 { color: #c58b0d }
+a.age2 > span { background-image: radial-gradient(1px 1px at center, #c58b0d 0.5px, transparent 1px) !important }
+a.age3 { color: #685e57 }
+a.age3 > span { background-image: radial-gradient(1px 1px at center, #685e57 0.5px, transparent 1px) !important }
+
+a.evergreen { color: #7b23e0 }
+a.evergreen > span { background-image: radial-gradient(1px 1px at center, #7b23e0 0.5px, transparent 1px) !important }
+
+pre {
+    tab-size: 4;
+}
+
+p code {
+    display: inline-block;
+    font-family: "Space Mono", monospace;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    font-size: 15px;
+    padding: 0px 5px;
+}
+
+pre {
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-family: "Space Mono", monospace;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 1.4rem;
+    max-height: 360px;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    padding: 0px 20px;
+    max-width: 36em;
+    margin: auto;
+    padding-bottom: 10rem;
+}
+
+#logo svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+#tl {
+    position: fixed;
+    top: 4rem;
+    left: 4rem;
+}
+
+#tl nav {
+    margin-top: 2.0rem;
+}
+
+#tl nav a {
+    display: block;
+    text-decoration: none;
+}
+
+#tl nav a,
+#tl .stat {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    color: #999;
+}
+
+#tl nav a svg {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 10px;
+    fill: #999;
+    stroke: #999;
+}
+
+#tl nav a:hover {
+    color: #444;
+}
+#tl nav a:hover svg {
+    fill: #444;
+    stroke: #444;
+}
+
+.column-container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+}
+.column:first-child { margin-left: 0 }
+.column:last-child { margin-right: 0 }
+
+
+figure {
+    display: block;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+figure img {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+figcaption {
+    font-family: 'EB Garamond', Garamond, serif;
+    /*font-family: 'Ibarra Real Nova', Garamond, serif;
+    font-family: 'Source Serif Pro', Garamond, serif;*/
+    font-size: 16px;
+    color: #999;
+    font-style: italic;
+}
+
+
+.table-container {
+    overflow-x: auto;
+}
+table {
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+table th {
+    font-weight: bold;
+}
+
+table.small td:not(:last-child) {
+    padding-right: 20px;
+}
+
+table.normal {
+    position: relative;
+    width: 100%;
+}
+table.normal td, table.normal th {
+    text-align: left;
+    padding: 4px 15px;
+    outline: 1px solid #BBB;
+}
+table.nowrap td, table.nowrap th {
+    white-space: nowrap;
+}
+
+blockquote {
+    margin-left: 20px;
+    margin-right: 40px;
+
+    padding-left: 25px;
+    border-left: 5px solid #DAD7D7;
+    color: rgb(78, 78, 78);
+}
+
+.divider {
+    margin-bottom: 10rem;
+}
+
+.tag {
+    background-color: #999;
+    font-family: "Space Mono", courier;
+    font-size: 9px;
+    padding: 0px 7px 1px 7px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    display: inline;
+    margin-left: 5px;
+}
+.tag.inline-date { 
+    margin-left: 0px;
+    font-size: 12px;
+    margin-right: 4px;
+    vertical-align: top;
+ }
+.tag.green { background-color: #76ad00; }
+.tag.blue { background-color: #0095eb; }
+
+.toc { margin-top: 0; }
+.toc-indent-1 { padding-left: 0px ; }
+.toc-indent-2 { padding-left: 25px; }
+.toc-indent-3 { padding-left: 50px; }
+
+.pagecover { 
+    display: block;
+    margin-bottom: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.pagecover > img {
+    margin: 0;
+    transform: scale(1);
+    transition: 0.25s transform;
+}
+.pagecover:hover > img{
+    transform: scale(1.05);
+}
+
+.pagelink {
+    display: flex;
+    height: 95px;
+    /*background-color: #D2CECA;*/
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.25s background-color;
+    text-decoration: none;
+    color: #000000;
+
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+/*.pagelink:hover {
+    background-color: rgb(179, 190, 209);
+}*/
+.pagelink-icon {
+    width: 95px;
+    flex: 1 0 1;
+    background-size: cover;
+}
+.pagelink-text {
+    flex: 1 0 235px;
+    padding: 15px 10px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: none;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.pagelink-text-title {
+    font-family: "Space Mono", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    transition: all .2s ease-out;
+}
+.pagelink-text-description {
+    font-size: 14;
+    /*font-family: "EB Garamond"*/
+    max-width: 300px;
+
+    transition: all .2s ease-out;
+}
+.pagelink-arrow {
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    
+    position: absolute;
+    top: 25px;
+    right: 40px;
+
+    transition: all .2s ease-out;
+}
+.pagelink:hover .pagelink-arrow {
+    opacity: 1;
+    z-index: 1001;
+    right: 25px;
+}
+.pagelink:hover .pagelink-text-title, .pagelink:hover .pagelink-text-description {
+    opacity: 0.5;
+}
+
+.pagelink::before {
+    content: "";
+    position: absolute;
+    z-index: 1000;
+    top: 1px;
+    right: 1px;
+    width: 200px;
+    height: 93px;
+
+    border-radius: 5px;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+.pagelink:hover::before {
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 1200px) {
+    #tl {
+        position: static;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #tl .stat {
+        display: none;
+    }
+    #tl nav {
+        margin-top: 0;
+    }
+    #tl nav a {
+        display: inline-block;
+        font-size: 16px;
+    }
+    #tl nav a:not(:last-child) {
+        margin-right: 20px;
+    }
+    #tl nav.social {
+        display: none;
+    }
+    #tl nav a svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .toc { display: none; }
+}
+
+@media screen and (max-width: 720px) {
+    .column-container {
+        display: block;
+    }
+    .column {
+        margin: auto !important;
+        margin-bottom: 2.0rem;
+        width: 400px;
+        max-width: 100%;
+    }
+    a.wiki-link {
+        font-size: inherit;
+    }
+    a.homepage-link {
+        font-size: inherit;
+    }
+}
+
+::-moz-selection {
+    background-color: #ff3392;
+    background-color: #000000;
+    text-shadow: none;
+    color: #FFFFFF;
+}
+
+::selection {
+    background-color: #ff3392;
+    background-color: #000000;
+    text-shadow: none;
+    color: #FFFFFF;
+}
+
+.toggle-summary{
+
+}
+
+
+.toggle-details {
+    background-color: rgba(119, 18, 60, 0.1);
+}
+
+        /* CODE BLOCK STYLING */
+        .highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #0099FF; font-style: italic } /* Comment */
+.highlight .err { color: #AA0000; background-color: #FFAAAA } /* Error */
+.highlight .k { color: #006699; font-weight: bold } /* Keyword */
+.highlight .o { color: #555555 } /* Operator */
+.highlight .cm { color: #0099FF; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #009999 } /* Comment.Preproc */
+.highlight .c1 { color: #0099FF; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #0099FF; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { background-color: #FFCCCC; border: 1px solid #CC0000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #003300; font-weight: bold } /* Generic.Heading */
+.highlight .gi { background-color: #CCFFCC; border: 1px solid #00CC00 } /* Generic.Inserted */
+.highlight .go { color: #AAAAAA } /* Generic.Output */
+.highlight .gp { color: #000099; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #003300; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #99CC66 } /* Generic.Traceback */
+.highlight .kc { color: #006699; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #006699; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #006699; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #006699 } /* Keyword.Pseudo */
+.highlight .kr { color: #006699; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #007788; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #FF6600 } /* Literal.Number */
+.highlight .s { color: #CC3300 } /* Literal.String */
+.highlight .na { color: #330099 } /* Name.Attribute */
+.highlight .nb { color: #336666 } /* Name.Builtin */
+.highlight .nc { color: #00AA88; font-weight: bold } /* Name.Class */
+.highlight .no { color: #336600 } /* Name.Constant */
+.highlight .nd { color: #9999FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #CC0000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #CC00FF } /* Name.Function */
+.highlight .nl { color: #9999FF } /* Name.Label */
+.highlight .nn { color: #00CCFF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #330099; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #003333 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #FF6600 } /* Literal.Number.Float */
+.highlight .mh { color: #FF6600 } /* Literal.Number.Hex */
+.highlight .mi { color: #FF6600 } /* Literal.Number.Integer */
+.highlight .mo { color: #FF6600 } /* Literal.Number.Oct */
+.highlight .sb { color: #CC3300 } /* Literal.String.Backtick */
+.highlight .sc { color: #CC3300 } /* Literal.String.Char */
+.highlight .sd { color: #CC3300; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #CC3300 } /* Literal.String.Double */
+.highlight .se { color: #CC3300; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #CC3300 } /* Literal.String.Heredoc */
+.highlight .si { color: #AA0000 } /* Literal.String.Interpol */
+.highlight .sx { color: #CC3300 } /* Literal.String.Other */
+.highlight .sr { color: #33AAAA } /* Literal.String.Regex */
+.highlight .s1 { color: #CC3300 } /* Literal.String.Single */
+.highlight .ss { color: #FFCC33 } /* Literal.String.Symbol */
+.highlight .bp { color: #336666 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #003333 } /* Name.Variable.Class */
+.highlight .vg { color: #003333 } /* Name.Variable.Global */
+.highlight .vi { color: #003333 } /* Name.Variable.Instance */
+.highlight .il { color: #FF6600 } /* Literal.Number.Integer.Long */
+    </style>
+</head>
+<body>
+    <!--NOTION_ID:49db21cb-02c7-4b7d-a8d5-8c703c1fddc3-->
+    <div id="tl">
+        <a href="/" id="logo">
+            <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+              "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="10.1389in" height="10.1528in"
+     viewBox="0 0 730 731">
+  <path id="Selection"
+        fill="black" stroke="black" stroke-width="1"
+        d="M 295.00,298.00
+           C 295.00,298.00 281.44,284.00 281.44,284.00
+             266.34,266.10 250.21,236.72 244.15,214.00
+             241.74,204.93 240.05,191.39 240.00,182.00
+             240.00,182.00 239.00,166.00 239.00,166.00
+             238.96,143.47 237.19,132.13 247.75,111.00
+             249.95,106.60 252.91,100.67 256.21,97.09
+             256.21,97.09 270.00,85.40 270.00,85.40
+             277.84,79.13 290.35,69.46 300.00,66.78
+             310.46,63.88 328.32,65.26 339.00,67.40
+             346.42,68.88 360.27,71.35 365.21,77.21
+             369.03,81.73 370.59,88.33 371.79,94.00
+             373.64,102.75 375.01,123.82 375.00,133.00
+             375.00,133.00 374.00,150.00 374.00,150.00
+             374.00,150.00 372.00,196.00 372.00,196.00
+             372.00,196.00 371.00,215.00 371.00,215.00
+             371.00,215.00 370.00,232.00 370.00,232.00
+             370.00,232.00 368.00,278.00 368.00,278.00
+             368.00,278.00 367.00,293.00 367.00,293.00
+             367.00,293.00 395.15,261.00 395.15,261.00
+             395.15,261.00 460.15,186.00 460.15,186.00
+             466.52,178.77 476.48,165.73 485.00,161.90
+             488.47,160.35 495.17,158.90 498.58,161.17
+             502.05,163.48 502.90,172.19 502.34,176.00
+             500.99,185.29 487.07,199.57 480.73,207.00
+             480.73,207.00 421.72,277.00 421.72,277.00
+             421.72,277.00 376.00,327.00 376.00,327.00
+             376.00,327.00 408.00,349.29 408.00,349.29
+             408.00,349.29 458.00,385.15 458.00,385.15
+             473.59,396.52 497.46,412.91 515.00,420.42
+             515.00,420.42 551.00,435.40 551.00,435.40
+             555.70,437.29 561.53,439.66 560.33,446.00
+             559.41,450.82 554.30,453.47 550.00,454.70
+             543.71,456.50 540.87,455.69 535.00,456.09
+             535.00,456.09 513.00,457.96 513.00,457.96
+             513.00,457.96 469.00,460.91 469.00,460.91
+             469.00,460.91 416.00,464.09 416.00,464.09
+             416.00,464.09 372.00,467.09 372.00,467.09
+             372.00,467.09 360.00,468.00 360.00,468.00
+             358.91,476.30 359.01,478.79 359.00,487.00
+             359.00,487.00 358.04,499.00 358.04,499.00
+             358.04,499.00 358.04,511.00 358.04,511.00
+             358.04,511.00 356.96,526.00 356.96,526.00
+             356.96,526.00 356.96,540.00 356.96,540.00
+             356.96,540.00 356.00,552.00 356.00,552.00
+             356.00,552.00 354.00,608.00 354.00,608.00
+             354.00,608.00 353.04,620.00 353.04,620.00
+             353.04,620.00 353.04,632.00 353.04,632.00
+             353.04,632.00 352.00,647.00 352.00,647.00
+             351.87,658.45 352.73,671.27 345.21,680.91
+             338.34,689.72 324.25,687.21 321.76,676.00
+             319.92,669.35 321.92,661.71 321.76,655.00
+             321.76,655.00 323.00,617.00 323.00,617.00
+             323.00,617.00 323.96,605.00 323.96,605.00
+             323.96,605.00 323.96,591.00 323.96,591.00
+             323.96,591.00 324.96,579.00 324.96,579.00
+             324.96,579.00 324.96,564.00 324.96,564.00
+             324.96,564.00 326.00,549.00 326.00,549.00
+             326.00,549.00 326.00,536.00 326.00,536.00
+             326.00,536.00 327.00,523.00 327.00,523.00
+             327.00,523.00 327.00,510.00 327.00,510.00
+             327.00,510.00 328.00,495.00 328.00,495.00
+             328.01,486.11 327.81,482.02 329.00,473.00
+             329.00,473.00 288.00,476.83 288.00,476.83
+             288.00,476.83 230.00,482.58 230.00,482.58
+             230.00,482.58 204.00,485.00 204.00,485.00
+             199.78,485.00 195.56,484.93 192.30,481.61
+             188.55,477.50 190.15,470.62 192.30,466.00
+             196.05,457.15 201.46,454.22 208.00,447.96
+             208.00,447.96 218.00,438.17 218.00,438.17
+             218.00,438.17 285.00,375.09 285.00,375.09
+             285.00,375.09 334.00,329.00 334.00,329.00
+             321.65,322.95 304.81,307.81 295.00,298.00 Z
+           M 340.00,276.00
+           C 340.00,276.00 341.00,261.00 341.00,261.00
+             341.00,261.00 341.00,241.00 341.00,241.00
+             341.00,241.00 342.00,226.00 342.00,226.00
+             342.00,226.00 342.00,206.00 342.00,206.00
+             342.00,206.00 343.00,191.00 343.00,191.00
+             343.00,191.00 343.00,172.00 343.00,172.00
+             343.00,172.00 347.00,131.00 347.00,131.00
+             347.00,131.00 347.00,110.00 347.00,110.00
+             346.95,106.35 346.66,101.23 344.28,98.27
+             341.27,94.54 330.72,92.42 326.00,92.09
+             308.00,90.83 286.03,103.69 275.79,118.00
+             268.86,127.68 267.06,142.33 267.00,154.00
+             267.00,154.00 268.91,186.00 268.91,186.00
+             269.47,193.61 271.12,209.12 273.55,216.00
+             278.70,230.61 296.10,255.69 306.00,268.00
+             313.48,277.30 329.41,295.23 340.00,300.00
+             340.00,300.00 340.00,276.00 340.00,276.00 Z
+           M 364.00,372.00
+           C 364.00,372.00 363.00,389.00 363.00,389.00
+             363.00,389.00 362.00,422.00 362.00,422.00
+             362.00,422.00 361.00,440.00 361.00,440.00
+             361.00,440.00 394.00,438.09 394.00,438.09
+             394.00,438.09 439.00,435.09 439.00,435.09
+             439.00,435.09 474.00,432.00 474.00,432.00
+             474.00,432.00 403.00,381.42 403.00,381.42
+             403.00,381.42 366.00,355.00 366.00,355.00
+             362.80,359.35 364.01,366.72 364.00,372.00 Z
+           M 315.00,386.00
+           C 315.00,386.00 304.00,396.04 304.00,396.04
+             304.00,396.04 284.00,416.00 284.00,416.00
+             284.00,416.00 250.00,450.00 250.00,450.00
+             250.00,450.00 284.00,446.83 284.00,446.83
+             284.00,446.83 307.00,444.83 307.00,444.83
+             307.00,444.83 331.00,443.00 331.00,443.00
+             331.00,443.00 331.91,432.00 331.91,432.00
+             331.91,432.00 333.91,405.00 333.91,405.00
+             333.91,405.00 337.00,365.00 337.00,365.00
+             337.00,365.00 315.00,386.00 315.00,386.00 Z" />
+</svg>
+        </a>
+        
+        <!--
+        
+        -->
+    </div>
+    <main>
+        <header>
+            <h1 class="title">offering 7 - solve et coagula</h1>
+            
+        </header>
+
+        <p>Hi all and welcome to the “shedding” edition. I’m at the beginning of a new cycle in pandemic-world, shedding old habits. A shift has come in how I exercise, how I blog, and generally how I spend my time daily. I have a thesis proposal to write and the clock surprisingly hasn’t stopped ticking, so more and more of my energy is going into that. But how are you dear reader, ready to shed any sub-optimal behaviors yet?</p><p>This week was full of exciting events and we have beautiful pictures and ideas just for you. How cultural evolution makes rationality suck, a fundamental theory of physics(?), and regional state-coalitions in the US!”! (check out past weekly offerings at <a href="https://xiqo.xyz/projects/the-altar.html"><span>the altar</span></a>)</p><div class="divider"></div><h2 id="">
+            <a href="https://carcinisation.com/2014/11/22/why-cultural-evolution-is-real-and-what-it-is/" target="_blank">
+                <span><strong>Why Cultural Evolution Is Real (And What It Is)</strong></span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        </h2>
+            
+                <img src="/images\d7aac612-e7ea-41b3-843a-3fa85a117944.com"/>
+            
+        <ul><li><em>Image source: Wikipedia</em></li></ul><p>“For basically all of history, using reason would get you killed.”</p><p>People are bad at logic and reason because reasoning is maladaptive under cultural evolution. IT WORKS BAD. This is because cultural knowledge emerges not via deduction on explanation, but through natural selection. </p><p>The topic got my attention when I read SSC’s review of the book 
+            <a href="https://www.goodreads.com/book/show/25761655-the-secret-of-our-success" target="_blank">
+                <span>The Secret of our Success</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        . The book is about how cultural evolution, not raw intelligence is the real driver of human success and adaptability. Humans aren’t actually capable of just wandering into unfamiliar environments and using their big brains to make tools, adapt, and thrive. Well equipped European explorers consistently died in environments that were plentiful for local populations simply because they did not have the cultural toolkit to survive there.</p><p>The review details examples about manioc (which is toxic unless you cook it properly), divination (which works when the optimal strategy is to act randomly), and shark-eating taboos (sharks contain a chemical that causes birth defects).</p>
+            
+                <img src="/images\e7f56ae1-d703-4248-9120-1360da55f25a.com"/>
+            
+        <ul><li><em>Les temps prehistoriques - Pierre Joubert</em></li></ul><p>“Food processing is one of the easiest parts of transmissible, reproducing culture for us to observe. The 
+            <a href="http://en.m.wikipedia.org/wiki/Nixtamalization" target="_blank">
+                <span>nixtamalization</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+         process, an ancient American method of processing corn, increases the availability of a B vitamin (niacin). Like the shellfish and nardoo of the Outback, corn without its associated cultural processing cannot form the basis of a human diet; where corn traveled without nixtamalization, malnutrition followed.”</p><p>What allows individual humans to survive is being born into already adapted cultures. One is taught vital, but often incredibly complex survival techniques that no one would be able to discover on their own.</p><p>“Why Cultural Evolutions Is Real” remarks that “the relationship between humans and their culture is best modeled as a relationship between host and symbiote” and that’s definitely how I think about it. Culture can’t exist and reproduce without humans. Humans, after long dependence and co-evolution with it, cannot survive without culture.</p><p>Most traditions contain meta-traditions to defend themselves against reason. The fascinating thing is this makes sense. Questioning tradition would be synonymous with ignoring a wealth of hard-won best practices just because you can’t see why they work. For the vast majority of history, reason has been a tempting force pulling towards behavior that looks fine locally, but is less adaptive at broader time-scales.</p>
+            
+                <img src="/images\221fea33-2780-42c1-8032-1fd6a86d752d.com"/>
+            
+        <ul><li><em>Polynesian Fantasy - Arthur Johnsen</em></li></ul><p>“<em>The culture that once was slow-moving, and allowed ample time for adaptation, now changes so rapidly that adaptation cannot keep up with it. No sooner is adjustment of one kind begun than the culture takes a further turn and forces the adjustment in a new direction. No adjustment is ever finished. And the essential condition on the process—that it should in fact have time to reach its equilibrium—is violated.</em>”</p><ul><li>[[Christopher Alexander]], Notes on the Synthesis of Form</li></ul><p>People like Nassim Taleb emphasize the 
+            <a href="https://en.wikipedia.org/wiki/Lindy_effect" target="_blank">
+                <span>Lindy effect</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        , that the life-expectancy of some non-perishable is proportional to its current age, which implies old things will keep working for a long time.</p><p>It’s tempting to say that modernity has lead us to a point where we can reason about which traditions are important and which are crazy. But can we really believe this when it turns out bone-divination is among the ones that make sense?</p><p>Tying this to our present quest in the world of magic, magical practices can be seen as sets of heuristics acquired through cultural evolution. As methods for interacting with systems whose internal structure we don’t yet understand. It’s important, however, to remember that the explanations that are passed alongside these methods are usually rationalized a posteriori.</p><div class="divider"></div><h2 id="">
+            <a href="https://writings.stephenwolfram.com/2020/04/finally-we-may-have-a-path-to-the-fundamental-theory-of-physics-and-its-beautiful/" target="_blank">
+                <span><strong>Wolfram’s path to the fundamental theory of physics</strong></span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        <strong> or “Wolfram Physics Project”</strong></h2>
+            
+                <img src="/images\52daf11f-ff7a-44aa-9e1a-4ba135fd8f43.com"/>
+            
+        <ul><li><em>Visual summary of the whole thing</em></li></ul><p>Some people would say physics as a field has been kind of stuck. People aren’t really figuring out the “make quantum mechanics and relativity fit together” bit. I’m not going to try to explain it all, but I’d be massively remiss not to post about Stephen Wolfram’s announcement that he and his team may have a path to a fundamental theory of physics. Inside is a very approachable, well explained blogpost (full of pictures!) detailing their work.</p><p>Wolfram is famous for work in 
+            <a href="https://en.wikipedia.org/wiki/Cellular_automaton" target="_blank">
+                <span>cellular automata</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        , simple rules that produce complex behavior when applied in succession. For 50 years he’s been working towards a theory that puts this principle to work on explaining physics. A rule for the universe. He is known for having a big ego, which often attracts 
+            <a href="http://bactra.org/reviews/wolfram/" target="_blank">
+                <span>animosity</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+         and doesn’t really foster much engagement from the physics community.</p><p>What he’s doing is taking a simple rule that updates a graph and running it several times. Taking the graph (links between points) as space and the iteration of updates as the passing of time. From there he goes on to derive analogues of concepts like space, mass, time, and curvature. He derives E = mc^2 from nothing but the spatial and the causal graphs. Things you could interpret as special relativity and quantum mechanics emerge from the same model with nothing added.</p><p><em>Fun fact</em>: Black holes are disconnected pieces of a causal graph of states of the universe. (things inside can’t impact things outside and vice versa)</p>
+            
+                <img src="/images\b67afce2-7968-496f-9980-226694f85ae4.com"/>
+            
+        <p>Wolfram claims that the exact model for our universe might be among those in this family (depending on which rule and which initial graph you begin with). He urges people to take these tools and run with them. Along with this blogpost are two 60-page papers and a 
+            <a href="https://www.wolframphysics.org/technical-introduction/" target="_blank">
+                <span>400-page technical document</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+         detailing proofs and techniques used in this process. Funnily enough, Eric Weinstein has also recently 
+            <a href="https://youtu.be/Z7rd04KzLcg" target="_blank">
+                <span>announced a theory of everything called “geometric unity”</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        . I’m glad some of us are getting things done during social isolation.</p><p>Personally, I’m very excited about these news. I love the aesthetics of his approach, I think it’s very elegant, and as a complex systems person I’m biased towards this way of thinking. My own instincts point in the direction of “computation as the fundamental building block” as well.</p><p>However, I’m not a physicist, and this is not even close to a working theory of everything. But <strong>maybe</strong> it’s a way forward.</p><p>Exciting times!</p><div class="divider"></div><h2 id=""><strong>US regional pacts for COVID response</strong></h2>
+            
+                <img src="/images\d1682431-ad6f-41cc-8807-3ba7521dd2a0.com"/>
+            
+        <ul><li>Map of US mega-regions. Notice urban mega-clusters in lighter colors. From “
+            <a href="https://www.nytimes.com/2016/04/17/opinion/sunday/a-new-map-for-america.html" target="_blank">
+                <span>A New Map for America</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        ” in the NYT.</li></ul><p>Not really one link, but it seems American states have been forming regional coalitions to deal with the corona virus and I think that’s hilarious. As a geopolitics nerd I couldn’t resist sharing these maps and news.</p><ul><li>First 
+            <a href="https://www.gov.ca.gov/2020/04/13/california-oregon-washington-announce-western-states-pact/" target="_blank">
+                <span>California, Oregon, and Washington state in the West coast on April 13.</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        .</li><li>In the Northeast, Masschussets joined New York, Pennsylvania, New Jersey, Delaware, Conneticut and Rhode Island on 
+            <a href="https://www.bostonglobe.com/2020/04/13/business/cuomo-says-northeast-governors-will-coordinate-reopenings-after-coronavirus-outbreak-subsides/" target="_blank">
+                <span>April 15</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        .</li><li>And most recently Governors of Midwestwen states Minnesota, Michigan, Wisconsin, Illinois, Indiana, 
+            <a href="https://www.chicagobusiness.com/greg-hinz-politics/midwest-governors-form-covid-coalition" target="_blank">
+                <span>announced a Midwestern partnership</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+         on April 16.</li></ul>
+            
+                <img src="/images\610a21f9-559a-43fc-a60e-313e0f4cae6a.com"/>
+            
+        <ul><li>US regional COVID response pacts</li></ul><p>People have been making jokes about a 
+            <a href="https://fallout.fandom.com/wiki/United_States_of_America#Commonwealths" target="_blank">
+                <span>Fallout-type scenario</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+        . I should mention this will most certainly not lead to any armed conflicts or secession, but it will likely lead to interesting constitutional lawsuits and possibly the creation of regional level entities in the US.</p><p>As a non-american, it’s fascinating to appreciate the impact of geography on the layout of the country. The staggering size of urbanised clusters in the East, the contrast in connectivity between the eastern and western halves of the country… The great plains are indeed great and it feels cool to notice it’s boundary with the inland west, dry and mountainous which acts as a huge buffer zone that makes the West coast naturally isolated.</p><p>Check out 
+            <a href="https://twitter.com/mattparlmer/status/1249790845747900417" target="_blank">
+                <span>this twitter thread</span>
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" enable-background="new 0 0 100 100" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" style="fill: #ff3392;margin-left: -2px;margin-bottom: 4px;width: 0.5em;height: 0.5em;">
+                    <path d="M83.865,97.5H2.5V16.134h45.301v13.635H15.987v54.244h54.244V52.346h13.634V97.5z M97.5,38.564H83.865V25.81L47.947,61.582  l-9.528-9.53l35.917-35.918H61.582V2.5H97.5V38.564z"></path>
+                </svg>
+            </a>
+         for a more informed opinion and somewhat fanciful EU comparisons.</p><p>Thanks for reading!</p>
+    </main>
+</body>
+</html>

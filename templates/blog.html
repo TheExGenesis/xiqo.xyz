@@ -110,19 +110,21 @@
         </header>
 
         {{ content }}
-        
-        {% for p in collection.blog | sort(attribute="created")  | reverse  %}
-            <ul>
-                <li>
-                    <a href="{{ p.redirect or p.path }}">
-                        {{ p.name }}
-                        {% if p.tag %}
-                            <span class="tag {{ {'new':'blue', 'updated':'green'}.get(p.tag) or '' }}">{{ p.tag }}</span>
-                        {% endif %}
-                    </a>
-                </li>
-            </ul>
-        {% endfor %}
+        <p>
+            {% for p in collection.blog | sort(attribute="last_edited") | reverse %}
+                <img class="chladni" src="/chladni/{{p.wordcount | wordcount_to_freq }}.png" >
+                <a href="{{ p.path }}" class="homepage-link">
+                    <span>{{ p.name }} </span>
+                </a>
+                {% if p.flags.new %}
+                    <span class="tag blue">new</span>
+                {% elif p.flags.updated %}
+                    <span class="tag green">updated</span>
+                {% endif %}
+                <br/>
+            {% endfor %}
+        </p>
+
     </main>
 </body>
 </html>

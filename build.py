@@ -35,6 +35,9 @@ def countwords(data):
     page = data['page']
 
     if block['type'] not in ['code', 'callout'] and 'rawtext' in block:
+        if not block['rawtext']: 
+            print(block['rawtext'])
+            block['rawtext'] = ''
         count = len(block['rawtext'].split())
         sitedata['wordcount'] += count
 
@@ -52,8 +55,8 @@ def countpages(page):
 
 def setflags(page):
     page['flags'] = {
-        'new': False,
-        'updated': False
+        'new': page['flags'] == 'new',
+        'updated': page['flags'] == 'updated'
     }
 
 def test(page):
@@ -65,33 +68,33 @@ def test(page):
 
 website.templates['blocks']['callout']['👉'] = """
 <a class="pagecover" href="{{ href }}">
-    <img src="{{ cover_image}}" />
+    <img src="{{cover_image}}" />
 </a>
 """
 
-website.templates['blocks']['page'] = """
-{% if id in cache %}
-<a class="pagelink" href="{{ cache[id].path }}">
-    {% if cache[id].thumbnail %}
-        <div class="pagelink-icon" style="background-image: url({{ cache[id].thumbnail[0] }})"></div>
-    {% else %}
-        <div class="pagelink-icon" style="background-image: url(/thumbnail.png)"></div>
-    {% endif %}
+# website.templates['blocks']['page'] = """
+# {% if id in cache %}
+# <a class="pagelink" href="{{ cache[id].path }}">
+#     {% if cache[id].thumbnail %}
+#         <div class="pagelink-icon" style="background-image: url({{ cache[id].thumbnail[0] }})"></div>
+#     {% else %}
+#         <div class="pagelink-icon" style="background-image: url(/thumbnail.png)"></div>
+#     {% endif %}
 
-    <div class="pagelink-text">
-        <div class="pagelink-text-title">{{ cache[id].name }}</div>
-        <div class="pagelink-text-description">{% if cache[id].description %}{{ cache[id].description }}{% endif %}</div>
-    </div>
+#     <div class="pagelink-text">
+#         <div class="pagelink-text-title">{{ cache[id].name }}</div>
+#         <div class="pagelink-text-description">{% if cache[id].description %}{{ cache[id].description }}{% endif %}</div>
+#     </div>
 
-    <svg class="pagelink-arrow" width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M52.1739 2L100 52M100 52L52.1739 102M100 52H0" stroke="black" stroke-width="5"/>
-    </svg>
-</a>
-{% else %}
-ERROR {{ id }}
-{% endif %}
-"""
-website.templates['blocks']['link_to_page'] = website.templates['blocks']['page']
+#     <svg class="pagelink-arrow" width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+#         <path d="M52.1739 2L100 52M100 52L52.1739 102M100 52H0" stroke="black" stroke-width="5"/>
+#     </svg>
+# </a>
+# {% elif id %}
+# ERROR {{ id }}
+# {% endif %}
+# """
+# website.templates['blocks']['link_to_page'] = website.templates['blocks']['page']
 
 def test2(data):
     page_id = data['block']['text'][0][1][0][1]
@@ -110,8 +113,9 @@ website.listen('pages', test)
 
 
 website.addCollection('pages', 'https://www.notion.so/xiqo/d4bc1e0d76644a58b31dea6159354538?v=55bdd5f4295847d295d83d97c42d7ff2', folder='')
-website.addCollection('blog', 'https://www.notion.so/xiqo/b4d0b773477a4f008d6397d2dbdc19af?v=c5e1f2be13a041babd4da4231bb1661f')
 website.addCollection('projects', 'https://www.notion.so/xiqo/fbe593a66bcc45388a455934a73459d9?v=279245a2926f4cf5b497dd327cd6841b')
+website.addCollection('blog', 'https://www.notion.so/xiqo/b4d0b773477a4f008d6397d2dbdc19af?v=c5e1f2be13a041babd4da4231bb1661f')
+website.addCollection('offerings', 'https://www.notion.so/xiqo/00b6c2c4a2fb4c53ae98a87cb7da4634?v=0887bfaee7e44bdea2e465a4527d9732')
 
 #for page in website.cache.values():
 #    page['flags'] = {
@@ -161,20 +165,7 @@ with open(os.path.join('public', 'glossary.ndtl'), 'w') as f:
         for term, definition in sitedata['glossary'][category].items():
             f.write('  {} : {}\n'.format(term, definition))
 
-'''
-# generate twtxt for peer-to-peer discussion feed
-twtxt = website.client.get_collection_view("https://www.notion.so/eidka/51c6a2837c4c4d20b843b936f45ff75b?v=78a7ba17c6da434d8cc61232be5d7064")
-with open(os.path.join('public', 'twtxt.txt'), 'w') as f:
-    entries = twtxt.collection.get_rows()
-    entries = list(map(lambda x: x.get_all_properties(), entries))
-    entries = list(sorted(entries, key=lambda x: x['created'], reverse=True))
 
-    for row in entries:         
-        #date = row['created'].isoformat()   
-        # By default `.isoformat()` returns without timezone stamp
-        date = row['created'].strftime('%Y-%m-%dT%H:%M:%S+00:00')
-        f.write('{}\t{}\n'.format(date, row['text']))
-'''
 
 website.saveCache()
 

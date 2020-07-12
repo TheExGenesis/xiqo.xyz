@@ -111,14 +111,22 @@
 
         {{ content }}
         
-        {% for p in collection.projects | sort(attribute="created")  | reverse %}
-            <a href="{{ p.redirect or p.path }}">
-                {{ p.name }}
-                {% if p.tag %}
-                    <span class="tag {{ {'new':'blue', 'updated':'green'}.get(p.tag) or '' }}">{{ p.tag }}</span>
+        <!-- <p>
+            {% for project in collection.projects | sort(attribute="created") | reverse %}
+                {% if project.active %}
+                    <a href="{{ project.path }}" class="homepage-link">
+                        <span>{{ project.name }}</span>
+                    </a>
+                    {% if project.flags.new %}
+                        <span class="tag blue">new</span>
+                    {% elif project.flags.updated %}
+                        <span class="tag green">updated</span>
+                    {% endif %}
+                    <br/>
                 {% endif %}
-            </a>
-        {% endfor %}
+            {% endfor %}
+            
+        </p> -->
     </main>
 </body>
 </html>

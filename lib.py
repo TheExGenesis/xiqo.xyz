@@ -53,8 +53,8 @@ templates = {
         'toggle': '{% for li in children %}{{ render(li) }}{% endfor %}',
         'toggle_list_item': """
             <details>
-                <summary>{{ text }}</summary>
-                {% if children %}{% for sub_list in children %}{{ render(sub_list) }}{% endfor %}{% endif %}
+                <summary class="toggle-summary">{{ text }}</summary>
+                {% if children %}<div class="toggle-details">{% for sub_list in children %}{{ render(sub_list) }}{% endfor %}</div>{% endif %}
             </details>
         """,
         'column_list': """
@@ -68,8 +68,50 @@ templates = {
                 {% endfor %}
             </div>
         """,
-        'page':  '',             # TODO
-        'link_to_page': ''      # TODO
+        'page':  """
+            {% if id in cache %}
+            <a class="pagelink" href="{{ cache[id].path }}">
+                {% if cache[id].thumbnail %}
+                    <div class="pagelink-icon" style="background-image: url({{ cache[id].thumbnail[0] }})"></div>
+                {% else %}
+                    <div class="pagelink-icon" style="background-image: url(/thumbnail.png)"></div>
+                {% endif %}
+
+                <div class="pagelink-text">
+                    <div class="pagelink-text-title">{{ cache[id].name }}</div>
+                    <div class="pagelink-text-description">{% if cache[id].description %}{{ cache[id].description }}{% endif %}</div>
+                </div>
+
+                <svg class="pagelink-arrow" width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M52.1739 2L100 52M100 52L52.1739 102M100 52H0" stroke="black" stroke-width="5"/>
+                </svg>
+            </a>
+            {% elif id %}
+            ERROR {{ id }}
+            {% endif %}
+            """,             
+        'link_to_page': """
+            {% if id in cache %}
+            <a class="pagelink" href="{{ cache[id].path }}">
+                {% if cache[id].thumbnail %}
+                    <div class="pagelink-icon" style="background-image: url({{ cache[id].thumbnail[0] }})"></div>
+                {% else %}
+                    <div class="pagelink-icon" style="background-image: url(/thumbnail.png)"></div>
+                {% endif %}
+
+                <div class="pagelink-text">
+                    <div class="pagelink-text-title">{{ cache[id].name }}</div>
+                    <div class="pagelink-text-description">{% if cache[id].description %}{{ cache[id].description }}{% endif %}</div>
+                </div>
+
+                <svg class="pagelink-arrow" width="104" height="104" viewBox="0 0 104 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M52.1739 2L100 52M100 52L52.1739 102M100 52H0" stroke="black" stroke-width="5"/>
+                </svg>
+            </a>
+            {% elif id %}
+            ERROR {{ id }}
+            {% endif %}
+            """      
             
     },
     "text": {
@@ -289,8 +331,13 @@ class NotionWebsiteBuilder:
                     'end': isoformat(value.end),
                     #'timezone': value.timezone,
                 }
+            # thumbnail images as keys of pages in table
             elif type(value) == list:
-                value = list(map(lambda url: self.downloadImage(self._idfy('%s %s' % (_metadata['name'], key)) + '.png', url), value))
+                if len(value) > 0:
+                    # breakpoint()
+                    value = list(map(lambda url: self.downloadImage(self._idfy('%s %s' % (_metadata['name'], key)) + '.png', url), value))
+                    for i in range(len(value)):
+                        value[i] = value[i].replace('\\','/')
             
             page[key] = value
 
@@ -529,11 +576,7 @@ class NotionWebsiteBuilder:
         
 
         for page in self.cache.values():
-            # try:
             html = self.renderPage(page, data)
-            # except:
-                # breakpoint()
-            # print(page)
 
             page_dir = os.path.join(self.build_dir, page['path'][1:])
             print(page_dir)
@@ -577,7 +620,10 @@ class NotionWebsiteBuilder:
         # run through twice so that you can put jinja/html directly into Notion
         # perhaps this feature could be made optional
         template = self.env.from_string(outputHTML)
-        outputHTML = template.render(**template_data)
+        try:
+            outputHTML = template.render(**template_data)
+        except:
+            breakpoint()
 
         return outputHTML
     
@@ -585,17 +631,14 @@ class NotionWebsiteBuilder:
         absolute_path = os.path.join('/', 'images', name)
         image_cache_path = os.path.join(self.cache_dir, absolute_path[1:])
         #image_build_path = os.path.join(self.build_dir, path)
-        try:
-            if not os.path.isfile(image_cache_path):
-                req = self.client.session.get(source)
-                print(req)
-                _dir = os.path.dirname(image_cache_path)
-                if not os.path.exists(_dir):
-                    os.makedirs(_dir)
-                with open(image_cache_path, 'wb', encoding="utf-8") as image:
-                    image.write(req.content)
-        except:
-            breakpoint()
+        if not os.path.isfile(image_cache_path):
+            req = self.client.session.get(source)
+            print(req)
+            _dir = os.path.dirname(image_cache_path)
+            if not os.path.exists(_dir):
+                os.makedirs(_dir)
+            with open(image_cache_path, 'wb') as image:
+                image.write(req.content)
         
         return absolute_path
         #if not os.path.isfile(image_build_path): # make sure not to copy same image twice... if that's even possible?
