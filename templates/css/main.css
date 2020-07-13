@@ -1,4 +1,10 @@
 
+:root{
+    --old-highlight-color: #ff3392;
+    --highlight-color: #ee8f22;
+    
+  }  
+
 * {
     margin: 0;
     padding: 0;
@@ -78,12 +84,12 @@ ol, ul {
 }
 
 main a {
-    color: #ff3392;
+    color: var(--highlight-color);
     text-decoration: none;
     /*border-bottom: 1px dotted;*/
 }
 main a:not(.viewmore) > span {
-    background-image: radial-gradient(1px 1px at center, #ff3392 0.5px, transparent 1px);
+    background-image: radial-gradient(1px 1px at center, var(--highlight-color) 0.5px, transparent 1px);
     background-position: 0 1.10em;
     background-repeat: repeat-x;
     background-size: 3px 3px;
@@ -95,7 +101,7 @@ main a:not(.viewmore) > span {
 h1 a > span, h2 a > span, h3 a > span{
     /*border-width: 2px;*/
 
-    background-image: radial-gradient(1px 1px at center, #ff3392 1px, transparent 1.6px) !important;
+    background-image: radial-gradient(1px 1px at center, var(--highlight-color) 1px, transparent 1.6px) !important;
     background-position: 0 1.15em !important;
     background-size: 4px 3px !important;
 }
@@ -476,14 +482,14 @@ blockquote {
 }
 
 ::-moz-selection {
-    background-color: #ff3392;
+    background-color: var(--highlight-color);
     background-color: #000000;
     text-shadow: none;
     color: #FFFFFF;
 }
 
 ::selection {
-    background-color: #ff3392;
+    background-color: var(--highlight-color);
     background-color: #000000;
     text-shadow: none;
     color: #FFFFFF;
