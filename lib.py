@@ -344,7 +344,6 @@ class NotionWebsiteBuilder:
         if cache_path != None:
             page['path'] = cache_path
             self.cache[page['id']] = page
-
         page['children'] = self.blocksToJSONArray(_pageblock.children, page_ref=page)
 
         return page
@@ -381,11 +380,14 @@ class NotionWebsiteBuilder:
                 #self._cb('blocks/callout/%s' % data['icon'], data)
 
             if block.type == 'image':
-                #data['image_source'] = block.get('properties.source')[0][0]
                 data['image_source'] = block.source
+                data['image_source'] =  block.get('properties.source')[0][0] if data['image_source'] == None else data['image_source']
 
                 file_id = block.get('id')
-                extension = re.match('.*(\.[^\?\/]*)', data['image_source']).group(1)
+                try:
+                    extension = re.match('.*(\.[^\?\/]*)', data['image_source']).group(1)
+                except:
+                    breakpoint()
 
                 caption = block.get('properties.caption')
                 if caption != None:

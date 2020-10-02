@@ -112,10 +112,10 @@ website.listen('pages', setflags)
 website.listen('pages', test)
 
 
-website.addCollection('pages', 'https://www.notion.so/xiqo/d4bc1e0d76644a58b31dea6159354538?v=55bdd5f4295847d295d83d97c42d7ff2', folder='')
+website.addCollection('pages', 'https://www.notion.so/xiqo/d4bc1e0d76644a58b31dea6159354538?v=ab1b8785017b4054a72de1e57fec8ca8', folder='')
 website.addCollection('projects', 'https://www.notion.so/xiqo/fbe593a66bcc45388a455934a73459d9?v=279245a2926f4cf5b497dd327cd6841b')
 website.addCollection('blog', 'https://www.notion.so/xiqo/b4d0b773477a4f008d6397d2dbdc19af?v=c5e1f2be13a041babd4da4231bb1661f')
-website.addCollection('offerings', 'https://www.notion.so/xiqo/00b6c2c4a2fb4c53ae98a87cb7da4634?v=0887bfaee7e44bdea2e465a4527d9732')
+website.addCollection('offerings', 'https://www.notion.so/xiqo/00b6c2c4a2fb4c53ae98a87cb7da4634?v=dc529a044fa04d81ba4a1001003d6ede')
 
 #for page in website.cache.values():
 #    page['flags'] = {
